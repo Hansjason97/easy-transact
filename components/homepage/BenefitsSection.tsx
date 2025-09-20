@@ -1,4 +1,3 @@
-import image_f927bda273fdc55d87b64185bd60bcbf26e61a7b from "figma:asset/f927bda273fdc55d87b64185bd60bcbf26e61a7b.png";
 import {
   Shield,
   Clock,
@@ -52,23 +51,23 @@ export function BenefitsSection() {
               <AnimatedElement animation="fadeIn" delay={0.1}>
                 <div className="inline-flex items-center px-4 py-2 bg-red-50 border border-red-200 rounded-full text-[#BF1823] text-sm font-medium">
                   <Sparkles className="w-4 h-4 mr-2" />
-                  Pourquoi choisir Gpay ?
+                  {"Pourquoi choisir Gpay ?"}
                 </div>
               </AnimatedElement>
 
               <AnimatedElement animation="slideLeft" delay={0.2}>
                 <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                  Une expérience
+                  {"Une expérience"}
                   <span className="block text-transparent bg-gradient-to-r from-[#BF1823] to-[#A01419] bg-clip-text">
-                    révolutionnaire
+                    {"révolutionnaire"}
                   </span>
                 </h2>
               </AnimatedElement>
 
               <AnimatedElement animation="slideLeft" delay={0.4}>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  Découvrez pourquoi plus de 50,000 Camerounais font confiance à
-                  Gpay pour leurs transactions financières quotidiennes.
+                  {`Découvrez pourquoi plus de 50,000 Camerounais font confiance à
+                  Gpay pour leurs transactions financières quotidiennes.`}
                 </p>
               </AnimatedElement>
             </div>
@@ -107,23 +106,23 @@ export function BenefitsSection() {
               <div className="grid grid-cols-3 gap-6 pt-8">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-gray-900 mb-1">
-                    50K+
+                    {"50K+"}
                   </div>
                   <div className="text-sm text-gray-600">
-                    Utilisateurs actifs
+                    {"Utilisateurs actifs"}
                   </div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-gray-900 mb-1">
-                    99.9%
+                    {"99.9%"}
                   </div>
-                  <div className="text-sm text-gray-600">Disponibilité</div>
+                  <div className="text-sm text-gray-600">{"Disponibilité"}</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-gray-900 mb-1">
-                    24/7
+                    {"24/7"}
                   </div>
-                  <div className="text-sm text-gray-600">Support client</div>
+                  <div className="text-sm text-gray-600">{"Support client"}</div>
                 </div>
               </div>
             </AnimatedElement>
@@ -151,10 +150,10 @@ export function BenefitsSection() {
                   <CheckCircle className="h-6 w-6 text-green-500" />
                   <div>
                     <div className="font-semibold text-gray-900 text-sm">
-                      Transaction réussie
+                      {"Transaction réussie"}
                     </div>
                     <div className="text-gray-500 text-xs">
-                      1,250 FCFA envoyés
+                      {"1,250 FCFA envoyés"}
                     </div>
                   </div>
                 </div>
@@ -169,10 +168,10 @@ export function BenefitsSection() {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900 text-sm">
-                      100% Sécurisé
+                      {"100% Sécurisé"}
                     </div>
                     <div className="text-gray-500 text-xs">
-                      Chiffrement bancaire
+                      {"Chiffrement bancaire"}
                     </div>
                   </div>
                 </div>

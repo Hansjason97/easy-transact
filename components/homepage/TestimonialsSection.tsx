@@ -96,23 +96,23 @@ export function TestimonialsSection() {
           <AnimatedElement animation="fadeIn" delay={0.1}>
             <div className="inline-flex items-center px-4 py-2 bg-green-50 border border-green-200 rounded-full text-green-700 text-sm font-medium mb-6">
               <Star className="w-4 h-4 mr-2 fill-current" />
-              Témoignages Clients
+              {"Témoignages Clients"}
             </div>
           </AnimatedElement>
 
           <AnimatedElement animation="fadeUp" delay={0.2}>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              Des milliers de
+              {"Des milliers de"}
               <span className="block text-transparent bg-gradient-to-r from-green-500 to-[#084782] bg-clip-text">
-                clients satisfaits
+                {"clients satisfaits"}
               </span>
             </h2>
           </AnimatedElement>
 
           <AnimatedElement animation="fadeUp" delay={0.4}>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-              Découvrez comment Gpay transforme la vie financière des
-              Camerounais au quotidien.
+              {`Découvrez comment Gpay transforme la vie financière des
+              Camerounais au quotidien.`}
             </p>
           </AnimatedElement>
 
@@ -131,7 +131,7 @@ export function TestimonialsSection() {
                       <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-2xl border border-gray-100 max-w-4xl mx-auto">
                         <Quote className="h-16 w-16 text-[#084782] mx-auto mb-8 opacity-20" />
                         <blockquote className="text-2xl lg:text-3xl text-gray-900 mb-10 leading-relaxed font-light">
-                          "{testimonial.quote}"
+                          {`"${testimonial.quote}"`}
                         </blockquote>
                         <div className="flex items-center justify-center space-x-6 mb-6">
                           <ImageWithFallback
@@ -173,11 +173,11 @@ export function TestimonialsSection() {
         <div className="border-t border-gray-200 pt-16">
           <AnimatedElement animation="fadeUp" delay={0.8}>
             <h3 className="text-center text-2xl font-semibold text-gray-900 mb-4">
-              Nos Partenaires de Confiance
+              {"Nos Partenaires de Confiance"}
             </h3>
             <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-              Nous collaborons avec les leaders du marché pour vous offrir les
-              meilleurs services financiers.
+              {`Nous collaborons avec les leaders du marché pour vous offrir les
+              meilleurs services financiers.`}
             </p>
           </AnimatedElement>
 

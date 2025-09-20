@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { Button } from "../ui/button";
 import { AnimatedElement } from "../animatedElement";
+import Link from "next/link";
 
 const services = [
   {
@@ -69,11 +70,7 @@ const services = [
   },
 ];
 
-interface ServicesSectionProps {
-  onNavigate?: (page: string) => void;
-}
-
-export function ServicesSection({ onNavigate }: ServicesSectionProps) {
+export function ServicesSection() {
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       {/* Background decoration */}
@@ -85,22 +82,22 @@ export function ServicesSection({ onNavigate }: ServicesSectionProps) {
           <AnimatedElement animation="fadeIn" delay={0.1}>
             <div className="inline-flex items-center px-4 py-2 bg-blue-50 border border-blue-200 rounded-full text-[#084782] text-sm font-medium mb-6">
               <Zap className="w-4 h-4 mr-2" />
-              Services Complets
+              {"Services Complets"}
             </div>
           </AnimatedElement>
           <AnimatedElement animation="fadeUp" delay={0.2}>
             <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Tout ce dont vous avez besoin
+              {"Tout ce dont vous avez besoin"}
               <span className="block text-transparent bg-gradient-to-r from-[#084782] to-[#BF1823] bg-clip-text">
-                en un seul endroit
+                {"en un seul endroit"}
               </span>
             </h2>
           </AnimatedElement>
           <AnimatedElement animation="fadeUp" delay={0.4}>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Découvrez notre écosystème complet de services financiers
+              {`Découvrez notre écosystème complet de services financiers
               numériques, conçu spécialement pour les besoins des Camerounais
-              modernes.
+              modernes.`}
             </p>
           </AnimatedElement>
         </div>
@@ -137,15 +134,15 @@ export function ServicesSection({ onNavigate }: ServicesSectionProps) {
                     <p className="text-gray-600 mb-6 leading-relaxed">
                       {service.description}
                     </p>
-
-                    <Button
-                      variant="ghost"
-                      onClick={() => onNavigate?.("services")}
-                      className={`${service.textColor} hover:${service.bgColor} p-0 h-auto group/btn font-semibold`}
-                    >
-                      En savoir plus
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                    </Button>
+                    <Link href={"/services"}>
+                      <Button
+                        variant="ghost"
+                        className={`${service.textColor} hover:${service.bgColor} p-0 h-auto group/btn font-semibold`}
+                      >
+                        {"En savoir plus"}
+                        <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </AnimatedElement>
@@ -158,20 +155,21 @@ export function ServicesSection({ onNavigate }: ServicesSectionProps) {
           <div className="text-center">
             <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-3xl p-12 border border-gray-100">
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                Prêt à transformer vos finances ?
+                {"Prêt à transformer vos finances ?"}
               </h3>
               <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-                Rejoignez des milliers de Camerounais qui ont déjà choisi Gpay
-                pour simplifier leur vie financière.
+                {`Rejoignez des milliers de Camerounais qui ont déjà choisi Gpay
+                pour simplifier leur vie financière.`}
               </p>
-              <Button
-                size="lg"
-                onClick={() => onNavigate?.("services")}
-                className="!bg-gradient-to-r !from-[#084782] !to-[#064070] hover:!from-[#064070] hover:!to-[#053866] !text-white !border-0 shadow-xl hover:shadow-2xl transition-all duration-300 px-8 py-6 text-lg font-semibold rounded-2xl"
-              >
-                Découvrir tous nos services
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <Link href={"/services"}>
+                <Button
+                  size="lg"
+                  className="!bg-gradient-to-r !from-[#084782] !to-[#064070] hover:!from-[#064070] hover:!to-[#053866] !text-white !border-0 shadow-xl hover:shadow-2xl transition-all duration-300 px-8 py-6 text-lg font-semibold rounded-2xl"
+                >
+                  {"Découvrir tous nos services"}
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
             </div>
           </div>
         </AnimatedElement>

@@ -6,15 +6,14 @@ import {
   Instagram,
   Linkedin,
   Twitter,
+  ArrowRight,
 } from "lucide-react";
 import { ImageWithFallback } from "./imageWithFallBack";
-import gpayLogo from "figma:asset/c56bb8147fefae5e2c8204074109f676a94c7f99.png";
+import Link from "next/link";
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
 
-interface FooterProps {
-  onNavigate?: (page: string) => void;
-}
-
-export function Footer({ onNavigate }: FooterProps) {
+export function Footer() {
   return (
     <footer className="bg-gray-900 text-white relative overflow-hidden">
       {/* Background pattern */}
@@ -44,9 +43,9 @@ export function Footer({ onNavigate }: FooterProps) {
             </div>
 
             <p className="text-gray-300 text-lg leading-relaxed max-w-md">
-              L'API fintech de référence au Cameroun. Intégrez nos services de
+              {`L'API fintech de référence au Cameroun. Intégrez nos services de
               paiement dans vos applications et développez vos solutions
-              financières.
+              financières.`}
             </p>
 
             <div className="flex space-x-4">
@@ -69,7 +68,7 @@ export function Footer({ onNavigate }: FooterProps) {
 
           {/* Services */}
           <div className="space-y-6">
-            <h3 className="text-xl font-bold text-white">Services</h3>
+            <h3 className="text-xl font-bold text-white">{"Services"}</h3>
             <ul className="space-y-3">
               {[
                 "Agency Banking",
@@ -80,10 +79,8 @@ export function Footer({ onNavigate }: FooterProps) {
                 "Épargne & Investissement",
               ].map((service, index) => (
                 <li key={index}>
-                  <button
-                    onClick={() => onNavigate?.("services")}
-                    className="text-gray-300 hover:text-orange-400 transition-colors duration-200 text-left"
-                  >
+                  <Link href={`/services#${service}`}></Link>
+                  <button className="text-gray-300 hover:text-orange-400 transition-colors duration-200 text-left">
                     {service}
                   </button>
                 </li>
@@ -93,39 +90,39 @@ export function Footer({ onNavigate }: FooterProps) {
 
           {/* Contact */}
           <div className="space-y-6">
-            <h3 className="text-xl font-bold text-white">Contact</h3>
+            <h3 className="text-xl font-bold text-white">{"Contact"}</h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-orange-400 mt-1 flex-shrink-0" />
                 <div className="text-gray-300">
-                  <div>Quartier Bonanjo</div>
-                  <div>Douala, Cameroun</div>
+                  <div>{"Quartier Bonanjo"}</div>
+                  <div>{"Douala, Cameroun"}</div>
                 </div>
               </div>
 
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-orange-400 flex-shrink-0" />
-                <span className="text-gray-300">+237 6 XX XX XX XX</span>
+                <span className="text-gray-300">{"+237 6 XX XX XX XX"}</span>
               </div>
 
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-orange-400 flex-shrink-0" />
-                <span className="text-gray-300">contact@gpay.cm</span>
+                <span className="text-gray-300">{"contact@gpay.cm"}</span>
               </div>
             </div>
 
             {/* Newsletter */}
             <div className="space-y-3">
-              <h4 className="font-semibold text-white">Newsletter</h4>
+              <h4 className="font-semibold text-white">{"Newsletter"}</h4>
               <div className="flex space-x-2">
-                <input
+                <Input
                   type="email"
                   placeholder="Votre email"
-                  className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 transition-colors"
+                  className="border-input/20"
                 />
-                <button className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold rounded-xl transition-all duration-200 hover:scale-105">
-                  OK
-                </button>
+                <Button variant={"accent"} className="h-11 min-w-11">
+                  <ArrowRight size={20} strokeWidth={3}/>
+                </Button>
               </div>
             </div>
           </div>
@@ -135,28 +132,25 @@ export function Footer({ onNavigate }: FooterProps) {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
-              © 2024 Gpay Cameroun. Tous droits réservés.
+              {"© 2025 Gpay Cameroun. Tous droits réservés."}
             </div>
 
             <div className="flex space-x-6 text-sm">
-              <button
-                onClick={() => onNavigate?.("contact")}
-                className="text-gray-400 hover:text-orange-400 transition-colors"
-              >
-                Politique de confidentialité
-              </button>
-              <button
-                onClick={() => onNavigate?.("contact")}
-                className="text-gray-400 hover:text-orange-400 transition-colors"
-              >
-                Conditions d'utilisation
-              </button>
-              <button
-                onClick={() => onNavigate?.("contact")}
-                className="text-gray-400 hover:text-orange-400 transition-colors"
-              >
-                Mentions légales
-              </button>
+              <Link href={"/confidentialite"}>
+                <button className="text-gray-400 hover:text-orange-400 transition-colors">
+                  {"Politique de confidentialité"}
+                </button>
+              </Link>
+              <Link href={"/conditions-d-utilisation"}>
+                <button className="text-gray-400 hover:text-orange-400 transition-colors">
+                  {"Conditions d'utilisation"}
+                </button>
+              </Link>
+              <Link href={"/legal"}>
+                <button className="text-gray-400 hover:text-orange-400 transition-colors">
+                  {"Mentions légales"}
+                </button>
+              </Link>
             </div>
           </div>
         </div>

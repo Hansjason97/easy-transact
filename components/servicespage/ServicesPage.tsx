@@ -1,29 +1,24 @@
 "use client";
-import { Footer } from "../Footer";
-import { Button } from "../ui/button";
-import { Card, CardContent } from "../ui/card";
-import { ImageWithFallback } from "../imageWithFallBack";
 import {
-  Building2,
-  Smartphone,
-  CreditCard,
-  Users,
-  Globe,
-  TrendingUp,
   ArrowRight,
+  Building2,
   CheckCircle,
-  Star,
-  Zap,
-  Shield,
   Clock,
+  CreditCard,
+  Globe,
+  Shield,
+  Smartphone,
+  Star,
+  TrendingUp,
+  Users,
+  Zap,
 } from "lucide-react";
 import { AnimatedElement } from "../animatedElement";
+import { ImageWithFallback } from "../imageWithFallBack";
+import { Button } from "../ui/button";
+import { Card, CardContent } from "../ui/card";
 
-interface ServicesPageProps {
-  onNavigate?: (page: string) => void;
-}
-
-export function ServicesPage({ onNavigate }: ServicesPageProps) {
+export function ServicesPage() {
   const services = [
     {
       icon: Building2,
@@ -160,37 +155,29 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
             <AnimatedElement animation="fadeIn" delay={0.1}>
               <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-6">
                 <Zap className="w-4 h-4 mr-2" />
-                Services Complets
+                {"Services Complets"}
               </div>
             </AnimatedElement>
             <AnimatedElement animation="fadeUp" delay={0.2}>
               <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-                Tous nos Services
-                <span className="block text-white/90">pour votre Réussite</span>
+                {"Tous nos Services"}
+                <span className="block text-white/90">{"pour votre Réussite"}</span>
               </h1>
             </AnimatedElement>
             <AnimatedElement animation="fadeUp" delay={0.4}>
               <p className="text-xl lg:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">
-                Découvrez notre gamme complète de services financiers
+                {`Découvrez notre gamme complète de services financiers
                 numériques, conçus pour transformer votre activité et servir
-                votre communauté
+                votre communauté`}
               </p>
             </AnimatedElement>
             <AnimatedElement animation="fadeUp" delay={0.6}>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
                   size="lg"
-                  onClick={() => onNavigate?.("become-agent")}
-                  className="!bg-white !text-[#BF1823] hover:!bg-gray-100 !border-0 text-lg px-8 py-6"
+                  variant={"outline"}
                 >
-                  Devenir Agent Partenaire
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button
-                  size="lg"
-                  className="!bg-[#084782] !text-white hover:!bg-[#064070] !border-0 text-lg px-8 py-6"
-                >
-                  Télécharger l'App
+                  {"Télécharger l'App"}
                 </Button>
               </div>
             </AnimatedElement>
@@ -207,13 +194,13 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
           <div className="text-center mb-20">
             <AnimatedElement animation="fadeUp" delay={0.2}>
               <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-                Notre Gamme de Services
+                {"Notre Gamme de Services"}
               </h2>
             </AnimatedElement>
             <AnimatedElement animation="fadeUp" delay={0.4}>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Des solutions adaptées à tous vos besoins financiers et
-                commerciaux
+                {`Des solutions adaptées à tous vos besoins financiers et
+                commerciaux`}
               </p>
             </AnimatedElement>
           </div>
@@ -263,7 +250,7 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
                             variant="ghost"
                             className={`${service.textColor} hover:${service.bgColor} p-0 h-auto group/btn font-semibold w-fit`}
                           >
-                            En savoir plus
+                            {"En savoir plus"}
                             <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                           </Button>
                         </div>
@@ -296,13 +283,13 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
           <div className="text-center mb-16">
             <AnimatedElement animation="fadeUp" delay={0.2}>
               <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-                Pourquoi Choisir Gpay ?
+                {"Pourquoi Choisir Gpay ?"}
               </h2>
             </AnimatedElement>
             <AnimatedElement animation="fadeUp" delay={0.4}>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Les avantages qui font de Gpay le partenaire idéal pour votre
-                activité
+                {`Les avantages qui font de Gpay le partenaire idéal pour votre
+                activité`}
               </p>
             </AnimatedElement>
           </div>
@@ -342,37 +329,28 @@ export function ServicesPage({ onNavigate }: ServicesPageProps) {
         <div className="relative container mx-auto px-6 lg:px-8 text-center">
           <AnimatedElement animation="fadeUp" delay={0.2}>
             <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-              Prêt à Commencer ?
+              {"Prêt à Commencer ?"}
             </h2>
           </AnimatedElement>
           <AnimatedElement animation="fadeUp" delay={0.4}>
             <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
-              Rejoignez des milliers d'agents qui ont transformé leur activité
-              avec Gpay
+              {`Rejoignez des milliers d'agents qui ont transformé leur activité
+              avec Gpay`}
             </p>
           </AnimatedElement>
           <AnimatedElement animation="fadeUp" delay={0.6}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                onClick={() => onNavigate?.("become-agent")}
-                className="!bg-white !text-[#BF1823] hover:!bg-gray-100 !border-0 text-lg px-8 py-6"
+                variant={"outline"}
+                className="bg-white text-primary"
               >
-                Devenir Agent
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button
-                size="lg"
-                className="!bg-[#084782] !text-white hover:!bg-[#064070] !border-0 text-lg px-8 py-6"
-              >
-                Télécharger l'App
+                {"Télécharger l'App"}
               </Button>
             </div>
           </AnimatedElement>
         </div>
       </section>
-
-      <Footer onNavigate={onNavigate} />
     </div>
   );
 }

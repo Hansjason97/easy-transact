@@ -1,10 +1,22 @@
 "use client";
-import { Footer } from "../Footer";
+import { zodResolver } from '@hookform/resolvers/zod';
+import {
+  CheckCircle,
+  Clock,
+  Headphones,
+  Mail,
+  MapPin,
+  MessageCircle,
+  Phone,
+  Send
+} from "lucide-react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { AnimatedElement } from "../animatedElement";
 import { Button } from "../ui/button";
 import { Card, CardContent } from "../ui/card";
+import { Form, FormControl, FormField, FormItem, FormLabel } from "../ui/form";
 import { Input } from "../ui/input";
-import { Textarea } from "../ui/textarea";
-import { Label } from "../ui/label";
 import {
   Select,
   SelectContent,
@@ -12,25 +24,36 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Clock,
-  Send,
-  MessageCircle,
-  Headphones,
-  Zap,
-  CheckCircle,
-  Star,
-} from "lucide-react";
-import { AnimatedElement } from "../animatedElement";
+import { Textarea } from "../ui/textarea";
 
-interface ContactPageProps {
-  onNavigate?: (page: string) => void;
-}
 
-export function ContactPage({ onNavigate }: ContactPageProps) {
+const formSchema = z.object({
+  firstName: z.string().min(3,{message: "Trop court"}).max(20, {message: "Trop long"}),
+  lastName: z.string().min(3, {message: "Trop court"}).max(21, {message: "Trop long"}),
+  email: z.email(),
+  phone: z.string(),
+  subject: z.string(),
+  message: z.string().max(240, {message: "Trop long"})
+});
+
+export function ContactPage() {
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: "",
+    }
+  });
+
+  const onSubmit = (values:z.infer<typeof formSchema>)=>{
+    console.log(values)
+  }
+
   const contactInfo = [
     {
       icon: MapPin,
@@ -138,21 +161,21 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
             <AnimatedElement animation="fadeIn" delay={0.1}>
               <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-6">
                 <MessageCircle className="w-4 h-4 mr-2" />
-                Support Client
+                {"Support Client"}
               </div>
             </AnimatedElement>
             <AnimatedElement animation="fadeUp" delay={0.2}>
               <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-                Contactez-Nous
+                {"Contactez-Nous"}
                 <span className="block text-white/90">
-                  Nous sommes là pour vous
+                  {"Nous sommes là pour vous"}
                 </span>
               </h1>
             </AnimatedElement>
             <AnimatedElement animation="fadeUp" delay={0.4}>
               <p className="text-xl lg:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">
-                Notre équipe est disponible pour vous accompagner dans votre
-                parcours fintech et répondre à toutes vos questions
+                {`Notre équipe est disponible pour vous accompagner dans votre
+                parcours fintech et répondre à toutes vos questions`}
               </p>
             </AnimatedElement>
           </div>
@@ -171,106 +194,104 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
               <AnimatedElement animation="fadeIn" delay={0.1}>
                 <div className="inline-flex items-center px-4 py-2 bg-red-50 border border-red-200 rounded-full text-[#BF1823] text-sm font-medium mb-6">
                   <Send className="w-4 h-4 mr-2" />
-                  Envoyez-nous un Message
+                  {"Envoyez-nous un Message"}
                 </div>
               </AnimatedElement>
               <AnimatedElement animation="slideLeft" delay={0.2}>
                 <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-                  Parlons de votre Projet
+                  {"Parlons de votre Projet"}
                 </h2>
               </AnimatedElement>
               <AnimatedElement animation="slideLeft" delay={0.4}>
                 <p className="text-lg text-gray-600 mb-8">
-                  Vous avez une question ou besoin d'assistance ? Remplissez le
+                  {`Vous avez une question ou besoin d'assistance ? Remplissez le
                   formulaire ci-dessous et nous vous répondrons dans les plus
-                  brefs délais.
+                  brefs délais.`}
                 </p>
               </AnimatedElement>
 
               <AnimatedElement animation="slideLeft" delay={0.6}>
                 <Card className="border-0 shadow-xl">
                   <CardContent className="p-8">
-                    <form className="space-y-6">
-                      <div className="grid md:grid-cols-2 gap-6">
-                        <div>
-                          <Label htmlFor="firstName">Prénom</Label>
-                          <Input
-                            id="firstName"
-                            placeholder="Votre prénom"
-                            className="mt-2 h-10"
-                          />
+                    <Form {...form}>
+                      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                        <div className="grid md:grid-cols-2 gap-6">
+                          <FormField control={form.control} name="firstName" render={({field})=>(
+                            <FormItem>
+                              <FormLabel>{"Nom"}</FormLabel>
+                              <FormControl>
+                                <Input {...field} placeholder="Votre Nom"/>
+                              </FormControl>
+                            </FormItem>
+                          )} />
+                          <FormField control={form.control} name="lastName" render={({field})=>(
+                            <FormItem>
+                              <FormLabel>{"Prénom"}</FormLabel>
+                              <FormControl>
+                                <Input {...field} placeholder="Votre prénom"/>
+                              </FormControl>
+                            </FormItem>
+                          )} />
                         </div>
-                        <div>
-                          <Label htmlFor="lastName">Nom</Label>
-                          <Input
-                            id="lastName"
-                            placeholder="Votre nom"
-                            className="mt-2 h-10"
-                          />
-                        </div>
-                      </div>
+                          <FormField control={form.control} name="email" render={({field})=>(
+                            <FormItem>
+                              <FormLabel>{"Adresse mail"}</FormLabel>
+                              <FormControl>
+                                <Input {...field} placeholder="ex. jeanpierre@email.com"/>
+                              </FormControl>
+                            </FormItem>
+                          )} />
+                          <FormField control={form.control} name="phone" render={({field})=>(
+                            <FormItem>
+                              <FormLabel>{"Numéro de téléphone"}</FormLabel>
+                              <FormControl>
+                                <Input {...field} placeholder="ex. +237 677"/>
+                              </FormControl>
+                            </FormItem>
+                          )} />
+                          <FormField control={form.control} name="subject" render={({field})=>(
+                            <FormItem>
+                              <FormLabel>{"Sujet"}</FormLabel>
+                              <FormControl>
+                                <Select value={field.value} onValueChange={field.onChange}>
+                            <SelectTrigger className="w-full">
+                              <SelectValue placeholder="Choisissez un sujet" />
+                            </SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="general">
+                                {"Question générale"}
+                              </SelectItem>
+                              <SelectItem value="api">{"Intégration API"}</SelectItem>
+                              <SelectItem value="support">
+                                {"Support technique"}
+                              </SelectItem>
+                              <SelectItem value="partnership">
+                                {"Partenariat"}
+                              </SelectItem>
+                              <SelectItem value="other">{"Autre"}</SelectItem>
+                            </SelectContent>
+                          </Select>
+                              </FormControl>
+                            </FormItem>
+                          )} />
+                          <FormField control={form.control} name="message" render={({field})=>(
+                            <FormItem>
+                              <FormLabel>{"Message"}</FormLabel>
+                              <FormControl>
+                                <Textarea {...field} placeholder="Décrivez votre demande en détail..."/>
+                              </FormControl>
+                            </FormItem>
+                          )} />
+                        <Button
+                          type="submit"
+                          size="lg"
+                        >
+                          {"Envoyer le Message"}
+                          <Send size={20} />
+                        </Button>
+                      </form>
 
-                      <div>
-                        <Label htmlFor="email">Email</Label>
-                        <Input
-                          id="email"
-                          type="email"
-                          placeholder="votre.email@exemple.com"
-                          className="mt-2 h-10"
-                        />
-                      </div>
-
-                      <div>
-                        <Label htmlFor="phone">Téléphone</Label>
-                        <Input
-                          id="phone"
-                          type="tel"
-                          placeholder="+237 6XX XX XX XX"
-                          className="mt-2 h-10"
-                        />
-                      </div>
-
-                      <div>
-                        <Label htmlFor="subject">Sujet</Label>
-                        <Select>
-                          <SelectTrigger className="mt-2 h-10">
-                            <SelectValue placeholder="Choisissez un sujet" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="general">
-                              Question générale
-                            </SelectItem>
-                            <SelectItem value="api">Intégration API</SelectItem>
-                            <SelectItem value="support">
-                              Support technique
-                            </SelectItem>
-                            <SelectItem value="partnership">
-                              Partenariat
-                            </SelectItem>
-                            <SelectItem value="other">Autre</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-
-                      <div>
-                        <Label htmlFor="message">Message</Label>
-                        <Textarea
-                          id="message"
-                          placeholder="Décrivez votre demande en détail..."
-                          rows={6}
-                          className="mt-2"
-                        />
-                      </div>
-
-                      <Button
-                        type="submit"
-                        size="lg"
-                        className="w-full !bg-[#BF1823] hover:!bg-[#A01419] !text-white !border-0 shadow-lg hover:shadow-xl transition-all duration-300"
-                      >
-                        <Send className="mr-2 h-5 w-5" />
-                        Envoyer le Message
-                      </Button>
-                    </form>
+                    </Form>
                   </CardContent>
                 </Card>
               </AnimatedElement>
@@ -281,10 +302,10 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
               <AnimatedElement animation="slideRight" delay={0.2}>
                 <div>
                   <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-                    Informations de Contact
+                    {"Informations de Contact"}
                   </h2>
                   <p className="text-lg text-gray-600 mb-8">
-                    Plusieurs moyens de nous joindre selon vos préférences
+                    {"Plusieurs moyens de nous joindre selon vos préférences"}
                   </p>
                 </div>
               </AnimatedElement>
@@ -335,18 +356,18 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
             <AnimatedElement animation="fadeIn" delay={0.1}>
               <div className="inline-flex items-center px-4 py-2 bg-blue-50 border border-blue-200 rounded-full text-[#084782] text-sm font-medium mb-6">
                 <Headphones className="w-4 h-4 mr-2" />
-                Moyens de Contact
+                {"Moyens de Contact"}
               </div>
             </AnimatedElement>
             <AnimatedElement animation="fadeUp" delay={0.2}>
               <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-                Choisissez votre Canal Préféré
+                {"Choisissez votre Canal Préféré"}
               </h2>
             </AnimatedElement>
             <AnimatedElement animation="fadeUp" delay={0.4}>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Plusieurs options s'offrent à vous pour obtenir l'aide dont vous
-                avez besoin
+                {`Plusieurs options s'offrent à vous pour obtenir l'aide dont vous
+                avez besoin`}
               </p>
             </AnimatedElement>
           </div>
@@ -384,7 +405,7 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
                       ))}
                     </div>
 
-                    <Button className="w-full !bg-transparent !text-[#BF1823] hover:!bg-[#BF1823] hover:!text-white !border-[#BF1823] border-2 transition-all duration-300">
+                    <Button size={"lg"} variant={"secondary"}>
                       {channel.action}
                     </Button>
                   </CardContent>
@@ -401,12 +422,12 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
           <div className="text-center mb-16">
             <AnimatedElement animation="fadeUp" delay={0.2}>
               <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-                Questions Fréquentes
+                {"Questions Fréquentes"}
               </h2>
             </AnimatedElement>
             <AnimatedElement animation="fadeUp" delay={0.4}>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Trouvez rapidement des réponses aux questions les plus courantes
+                {`Trouvez rapidement des réponses aux questions les plus courantes`}
               </p>
             </AnimatedElement>
           </div>
@@ -440,8 +461,6 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
           </div>
         </div>
       </section>
-
-      <Footer onNavigate={onNavigate} />
     </div>
   );
 }

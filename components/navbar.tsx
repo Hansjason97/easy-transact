@@ -8,7 +8,7 @@ import { Menu } from 'lucide-react'
 
 function Navbar() {
   return (
-    <header className="bg-white/95 backdrop-blur-sm border-b border-gray-100 sticky top-0 z-10">
+    <header className="bg-white/95 backdrop-blur-sm border-b border-gray-100 sticky top-0 z-30">
       <div className="container mx-auto px-6 lg:px-7">
         <div className="flex justify-between items-center h-18">
           {/**Logo Home */}
@@ -33,6 +33,7 @@ function Navbar() {
                 <SheetTitle>
                   <img src={"/images/logo.png"} className='h-12 w-autos'/>
                 </SheetTitle>
+                <SheetDescription/>
               </SheetHeader>
               <div className='w-full px-3 flex flex-col gap-1'>
                 {navLinks.map((item, id)=><NavigationLink key={id} href={item.href} className="w-full rounded-sm inline-flex min-h-14 items-center px-4 py-2 hover:bg-secondary/10">{item.title}</NavigationLink>)}

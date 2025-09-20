@@ -1,23 +1,22 @@
 "use client";
-import { Footer } from "../Footer";
-import { Button } from "../ui/button";
-import { Card, CardContent } from "../ui/card";
-import { ImageWithFallback } from "../imageWithFallBack";
 import {
-  Target,
+  ArrowRight,
+  Award,
+  Globe,
   Heart,
   Shield,
-  Users,
-  TrendingUp,
-  Globe,
-  Award,
-  ArrowRight,
-  Zap,
-  CheckCircle,
   Star,
+  Target,
+  TrendingUp,
+  Users,
+  Zap
 } from "lucide-react";
-import { AnimatedElement } from "../animatedElement";
 import Link from "next/link";
+import { AnimatedElement } from "../animatedElement";
+import { Footer } from "../Footer";
+import { ImageWithFallback } from "../imageWithFallBack";
+import { Button } from "../ui/button";
+import { Card, CardContent } from "../ui/card";
 
 export function AboutPage() {
   const values = [
@@ -107,22 +106,22 @@ export function AboutPage() {
             <AnimatedElement animation="fadeIn" delay={0.1}>
               <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white text-sm font-medium mb-6">
                 <Heart className="w-4 h-4 mr-2" />
-                Notre Histoire
+                {"Notre Histoire"}
               </div>
             </AnimatedElement>
             <AnimatedElement animation="fadeUp" delay={0.2}>
               <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-                À Propos de Gpay
+                {"À Propos de Gpay"}
                 <span className="block text-white/90">
-                  Pionnier de la Fintech
+                  {"Pionnier de la Fintech"}
                 </span>
               </h1>
             </AnimatedElement>
             <AnimatedElement animation="fadeUp" delay={0.4}>
               <p className="text-xl lg:text-2xl mb-8 opacity-90 max-w-3xl mx-auto">
-                Nous démocratisons l'accès aux services financiers pour tous les
+                {`Nous démocratisons l'accès aux services financiers pour tous les
                 Camerounais, en alliant innovation technologique et
-                compréhension des besoins locaux
+                compréhension des besoins locaux`}
               </p>
             </AnimatedElement>
           </div>
@@ -140,29 +139,29 @@ export function AboutPage() {
               <AnimatedElement animation="fadeIn" delay={0.1}>
                 <div className="inline-flex items-center px-4 py-2 bg-red-50 border border-red-200 rounded-full text-[#BF1823] text-sm font-medium mb-6">
                   <Target className="w-4 h-4 mr-2" />
-                  Notre Mission
+                  {"Notre Mission"}
                 </div>
               </AnimatedElement>
               <AnimatedElement animation="slideLeft" delay={0.2}>
                 <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-                  Transformer l'écosystème financier camerounais
+                  {"Transformer l'écosystème financier camerounais"}
                 </h2>
               </AnimatedElement>
               <AnimatedElement animation="slideLeft" delay={0.4}>
                 <p className="text-xl text-gray-600 mb-6 leading-relaxed">
-                  Chez Gpay, nous croyons que chaque Camerounais mérite un accès
+                  {`Chez Gpay, nous croyons que chaque Camerounais mérite un accès
                   équitable aux services financiers modernes. Notre mission est
                   de transformer l'écosystème financier camerounais en proposant
                   des solutions innovantes, sécurisées et adaptées aux réalités
-                  locales.
+                  locales.`}
                 </p>
               </AnimatedElement>
               <AnimatedElement animation="slideLeft" delay={0.6}>
                 <p className="text-lg text-gray-600 mb-8">
-                  Nous accompagnons les entrepreneurs, commerçants et
+                  {`Nous accompagnons les entrepreneurs, commerçants et
                   particuliers dans leur développement économique grâce à des
                   technologies de pointe et un réseau de partenaires de
-                  confiance.
+                  confiance.`}
                 </p>
               </AnimatedElement>
               <AnimatedElement animation="slideLeft" delay={0.8}>
@@ -171,7 +170,7 @@ export function AboutPage() {
                     size="lg"
                     className="!bg-[#BF1823] hover:!bg-[#A01419] !text-white !border-0 shadow-lg hover:shadow-xl transition-all duration-300"
                   >
-                    Contacter Nous
+                    {"Contacter Nous"}
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
@@ -200,18 +199,18 @@ export function AboutPage() {
             <AnimatedElement animation="fadeIn" delay={0.1}>
               <div className="inline-flex items-center px-4 py-2 bg-blue-50 border border-blue-200 rounded-full text-[#084782] text-sm font-medium mb-6">
                 <Zap className="w-4 h-4 mr-2" />
-                Nos Valeurs
+                {"Nos Valeurs"}
               </div>
             </AnimatedElement>
             <AnimatedElement animation="fadeUp" delay={0.2}>
               <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-                Les Principes qui nous Guident
+                {"Les Principes qui nous Guident"}
               </h2>
             </AnimatedElement>
             <AnimatedElement animation="fadeUp" delay={0.4}>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Chaque décision que nous prenons est guidée par ces valeurs
-                fondamentales
+                {`Chaque décision que nous prenons est guidée par ces valeurs
+                fondamentales`}
               </p>
             </AnimatedElement>
           </div>
@@ -250,12 +249,12 @@ export function AboutPage() {
           <div className="text-center mb-16">
             <AnimatedElement animation="fadeUp" delay={0.2}>
               <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-                Notre Parcours
+                {"Notre Parcours"}
               </h2>
             </AnimatedElement>
             <AnimatedElement animation="fadeUp" delay={0.4}>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                De startup innovante à leader de la fintech camerounaise
+                {"De startup innovante à leader de la fintech camerounaise"}
               </p>
             </AnimatedElement>
           </div>
@@ -306,13 +305,13 @@ export function AboutPage() {
           <div className="text-center mb-16">
             <AnimatedElement animation="fadeUp" delay={0.2}>
               <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-                Gpay en Chiffres
+                {"Gpay en Chiffres"}
               </h2>
             </AnimatedElement>
             <AnimatedElement animation="fadeUp" delay={0.4}>
               <p className="text-xl opacity-90 max-w-3xl mx-auto">
-                L'impact de notre plateforme sur l'écosystème financier
-                camerounais
+                {`L'impact de notre plateforme sur l'écosystème financier
+                camerounais`}
               </p>
             </AnimatedElement>
           </div>
@@ -348,13 +347,13 @@ export function AboutPage() {
         <div className="container mx-auto px-6 lg:px-8 text-center">
           <AnimatedElement animation="fadeUp" delay={0.2}>
             <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-              Rejoignez l'Aventure Gpay
+              {"Rejoignez l'Aventure Gpay"}
             </h2>
           </AnimatedElement>
           <AnimatedElement animation="fadeUp" delay={0.4}>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Que vous soyez un particulier, un commerçant ou un entrepreneur,
-              Gpay a une solution pour vous
+              {`Que vous soyez un particulier, un commerçant ou un entrepreneur,
+              Gpay a une solution pour vous`}
             </p>
           </AnimatedElement>
           <AnimatedElement animation="fadeUp" delay={0.6}>
@@ -362,25 +361,9 @@ export function AboutPage() {
               <Link href="/contact">
                 <Button
                   size="lg"
-                  className="!bg-[#BF1823] hover:!bg-[#A01419] !text-white !border-0 text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300"
+                  variant={"accent"}
                 >
-                  Contacter Nous
-                </Button>
-              </Link>
-              <Button
-                size="lg"
-                className="!bg-[#BF1823] hover:!bg-[#A01419] !text-white !border-0 text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                Devenir Agent
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Link href="/services">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="!border-[#BF1823] !text-[#BF1823] hover:!bg-[#BF1823] hover:!text-white text-lg px-8 py-6"
-                >
-                  Nos Services
+                  {"Contacter Nous"}
                 </Button>
               </Link>
             </div>

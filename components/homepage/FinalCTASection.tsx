@@ -3,12 +3,10 @@ import { Button } from "../ui/button";
 import { ArrowRight, CheckCircle, Sparkles } from "lucide-react";
 import { ImageWithFallback } from "../imageWithFallBack";
 import { AnimatedElement } from "../animatedElement";
+import Link from "next/link";
 
-interface FinalCTASectionProps {
-  onNavigate?: (page: string) => void;
-}
 
-export function FinalCTASection({ onNavigate }: FinalCTASectionProps) {
+export function FinalCTASection() {
   return (
     <section className="py-24 bg-gradient-to-br from-blue-900 via-blue-800 to-gray-900 text-white relative overflow-hidden">
       {/* Background decorations */}
@@ -37,24 +35,24 @@ export function FinalCTASection({ onNavigate }: FinalCTASectionProps) {
               <AnimatedElement animation="fadeIn" delay={0.1}>
                 <div className="inline-flex items-center px-4 py-2 bg-orange-500/20 border border-orange-400/30 rounded-full text-orange-300 text-sm font-medium">
                   <Sparkles className="w-4 h-4 mr-2" />
-                  Rejoignez notre réseau
+                  {"Rejoignez notre réseau"}
                 </div>
               </AnimatedElement>
 
               <AnimatedElement animation="slideLeft" delay={0.2}>
                 <h2 className="text-4xl lg:text-6xl font-bold leading-tight">
-                  Prêt à intégrer
+                  {"Prêt à intégrer"}
                   <span className="block text-transparent bg-gradient-to-r from-orange-400 to-yellow-300 bg-clip-text">
-                    l'API Gpay ?
+                    {"l'API Gpay ?"}
                   </span>
                 </h2>
               </AnimatedElement>
 
               <AnimatedElement animation="slideLeft" delay={0.4}>
                 <p className="text-xl lg:text-2xl text-blue-100 leading-relaxed">
-                  Rejoignez plus de 100 institutions financières qui font déjà
+                  {`Rejoignez plus de 100 institutions financières qui font déjà
                   confiance à l'API Gpay pour leurs solutions de paiement
-                  digital.
+                  digital.`}
                 </p>
               </AnimatedElement>
             </div>
@@ -82,23 +80,24 @@ export function FinalCTASection({ onNavigate }: FinalCTASectionProps) {
 
             {/* CTA Buttons */}
             <AnimatedElement animation="slideLeft" delay={1.0}>
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                <Link href={"https://api.gpay.com/"}>
+                </Link>
                 <Button
                   size="lg"
-                  onClick={() => onNavigate?.("api-docs")}
-                  className="!bg-gradient-to-r !from-orange-500 !to-orange-600 hover:!from-orange-600 hover:!to-orange-700 !text-white !border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 px-8 py-6 text-lg font-semibold rounded-2xl group"
+                  variant={"accent"}
+                  className="group"
                 >
-                  Intégrer l'API Gpay
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  {"Intégrer l'API Gpay"}
+                  <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                 </Button>
-
+                <Link href={"/contact"}>
+                </Link>
                 <Button
                   size="lg"
-                  variant="outline"
-                  onClick={() => onNavigate?.("contact")}
-                  className="!border-2 !border-white/30 !text-white !bg-white/10 hover:!bg-white hover:!text-gray-900 backdrop-blur-sm px-8 py-6 text-lg font-semibold rounded-2xl"
+                  variant="white"
                 >
-                  Contacter Support
+                  {"Contacter Support"}
                 </Button>
               </div>
             </AnimatedElement>
@@ -107,16 +106,16 @@ export function FinalCTASection({ onNavigate }: FinalCTASectionProps) {
             <AnimatedElement animation="slideLeft" delay={1.2}>
               <div className="flex items-center space-x-8 pt-6 text-blue-200">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-white">4.9/5</div>
-                  <div className="text-sm">Note client</div>
+                  <div className="text-2xl font-bold text-white">{"4.9/5"}</div>
+                  <div className="text-sm">{"Note client"}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-white">100+</div>
-                  <div className="text-sm">Partenaires</div>
+                  <div className="text-2xl font-bold text-white">{"100+"}</div>
+                  <div className="text-sm">{"Partenaires"}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-white">99.9%</div>
-                  <div className="text-sm">Disponibilité</div>
+                  <div className="text-2xl font-bold text-white">{"99.9%"}</div>
+                  <div className="text-sm">{"Disponibilité"}</div>
                 </div>
               </div>
             </AnimatedElement>
@@ -146,10 +145,10 @@ export function FinalCTASection({ onNavigate }: FinalCTASectionProps) {
                   <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                   <div>
                     <div className="font-semibold text-gray-900 text-sm">
-                      API intégrée
+                      {"API intégrée"}
                     </div>
                     <div className="text-gray-600 text-xs">
-                      15,000 transactions/jour
+                      {"15,000 transactions/jour"}
                     </div>
                   </div>
                 </div>
@@ -162,9 +161,9 @@ export function FinalCTASection({ onNavigate }: FinalCTASectionProps) {
                   <CheckCircle className="h-6 w-6 text-green-500" />
                   <div>
                     <div className="font-semibold text-gray-900 text-sm">
-                      API disponible
+                      {"API disponible"}
                     </div>
-                    <div className="text-gray-600 text-xs">99.9% uptime</div>
+                    <div className="text-gray-600 text-xs">{"99.9% uptime"}</div>
                   </div>
                 </div>
               </div>
