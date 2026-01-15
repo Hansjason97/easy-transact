@@ -34,9 +34,9 @@ export function Footer() {
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center">
               <ImageWithFallback
-                src="/images/logo.png"
+                src="/images/logo-dark.svg"
                 alt="Gpay Logo"
-                className="h-12 w-auto"
+                className="h-8 w-auto"
                 width={120}
                 height={48}
               />
@@ -80,7 +80,7 @@ export function Footer() {
               ].map((service, index) => (
                 <li key={index}>
                   <Link href={`/services#${service}`}></Link>
-                  <button className="text-gray-300 hover:text-orange-400 transition-colors duration-200 text-left">
+                  <button className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-left">
                     {service}
                   </button>
                 </li>
@@ -93,7 +93,7 @@ export function Footer() {
             <h3 className="text-xl font-bold text-white">{"Contact"}</h3>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-orange-400 mt-1 flex-shrink-0" />
+                <MapPin className="h-5 w-5 text-blue-400 mt-1 flex-shrink-0" />
                 <div className="text-gray-300">
                   <div>{"Quartier Bonanjo"}</div>
                   <div>{"Douala, Cameroun"}</div>
@@ -101,12 +101,12 @@ export function Footer() {
               </div>
 
               <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-orange-400 flex-shrink-0" />
+                <Phone className="h-5 w-5 text-blue-400 flex-shrink-0" />
                 <span className="text-gray-300">{"+237 6 XX XX XX XX"}</span>
               </div>
 
               <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-orange-400 flex-shrink-0" />
+                <Mail className="h-5 w-5 text-blue-400 flex-shrink-0" />
                 <span className="text-gray-300">{"contact@gpay.cm"}</span>
               </div>
             </div>
@@ -120,7 +120,7 @@ export function Footer() {
                   placeholder="Votre email"
                   className="border-input/20"
                 />
-                <Button variant={"accent"} className="h-11 min-w-11">
+                <Button variant={"accent"} className="h-11 min-w-11 bg-blue-600">
                   <ArrowRight size={20} strokeWidth={3}/>
                 </Button>
               </div>
@@ -137,17 +137,17 @@ export function Footer() {
 
             <div className="flex space-x-6 text-sm">
               <Link href={"/confidentialite"}>
-                <button className="text-gray-400 hover:text-orange-400 transition-colors">
+                <button className="text-gray-400 hover:text-blue-400 transition-colors">
                   {"Politique de confidentialité"}
                 </button>
               </Link>
               <Link href={"/conditions-d-utilisation"}>
-                <button className="text-gray-400 hover:text-orange-400 transition-colors">
+                <button className="text-gray-400 hover:text-blue-400 transition-colors">
                   {"Conditions d'utilisation"}
                 </button>
               </Link>
               <Link href={"/legal"}>
-                <button className="text-gray-400 hover:text-orange-400 transition-colors">
+                <button className="text-gray-400 hover:text-blue-400 transition-colors">
                   {"Mentions légales"}
                 </button>
               </Link>

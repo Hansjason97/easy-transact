@@ -14,14 +14,14 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-full h-full">
         <div className="absolute top-20 right-10 w-96 h-96 bg-blue-100 rounded-full opacity-30 blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 left-10 w-80 h-80 bg-red-100 rounded-full opacity-40 blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 left-10 w-80 h-80 bg-sky-100 rounded-full opacity-40 blur-3xl animate-pulse"></div>
       </div>
 
       <div className="relative container mx-auto px-6 lg:px-8 pt-20 pb-24">
         <div className="text-center max-w-4xl mx-auto space-y-12">
           {/* Badge */}
           <AnimatedElement animation="fadeIn" delay={0.1}>
-            <div className="inline-flex items-center px-4 py-2 bg-red-50 border border-red-200 rounded-full text-[#BF1823] text-sm font-medium">
+            <div className="inline-flex items-center px-4 py-2 bg-blue-50 border border-blue-200 rounded-full text-primary text-sm font-medium">
               <CheckCircle className="w-4 h-4 mr-2" />
               {"Solution fintech #1 au Cameroun"}
             </div>
@@ -32,14 +32,14 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
             <AnimatedElement animation="fadeUp" delay={0.2}>
               <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 leading-tight tracking-tight">
                 {"Révolutionnez vos"}
-                <span className="block bg-gradient-to-r from-[#084782] via-[#084782] to-[#BF1823] bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-primary via-primary to-secondary bg-clip-text text-transparent">
                   {"transactions financières"}
                 </span>
               </h1>
             </AnimatedElement>
             <AnimatedElement animation="fadeUp" delay={0.4}>
               <p className="text-xl lg:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                {`Intégrez facilement l'API Gpay dans vos systèmes bancaires et
+                {`Intégrez facilement l'API EasyTransact dans vos systèmes bancaires et
                 fintech. Une solution complète pour les paiements digitaux au
                 Cameroun.`}
               </p>
@@ -52,7 +52,7 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
               <Button
                 size="lg"
                 onClick={() => onNavigate?.("api-docs")}
-                className="!bg-gradient-to-r !from-[#084782] !to-[#064070] hover:!from-[#064070] hover:!to-[#053866] !text-white !border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 px-8 py-6 text-lg font-semibold rounded-2xl group"
+                className="!bg-gradient-to-r !from-primary !to-secondary hover:!from-primary hover:!to-primary/80 !text-white !border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 px-8 py-6 text-lg font-semibold rounded-2xl group"
               >
                 {"Documentation API"}
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

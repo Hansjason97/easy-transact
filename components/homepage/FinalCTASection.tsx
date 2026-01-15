@@ -43,7 +43,7 @@ export function FinalCTASection() {
                 <h2 className="text-4xl lg:text-6xl font-bold leading-tight">
                   {"Prêt à intégrer"}
                   <span className="block text-transparent bg-gradient-to-r from-orange-400 to-yellow-300 bg-clip-text">
-                    {"l'API Gpay ?"}
+                    {"l'API Easy Transact ?"}
                   </span>
                 </h2>
               </AnimatedElement>
@@ -51,7 +51,7 @@ export function FinalCTASection() {
               <AnimatedElement animation="slideLeft" delay={0.4}>
                 <p className="text-xl lg:text-2xl text-blue-100 leading-relaxed">
                   {`Rejoignez plus de 100 institutions financières qui font déjà
-                  confiance à l'API Gpay pour leurs solutions de paiement
+                  confiance à l'API Easy Transact pour leurs solutions de paiement
                   digital.`}
                 </p>
               </AnimatedElement>
@@ -81,14 +81,14 @@ export function FinalCTASection() {
             {/* CTA Buttons */}
             <AnimatedElement animation="slideLeft" delay={1.0}>
               <div className="flex flex-col sm:flex-row gap-3 pt-4">
-                <Link href={"https://api.gpay.com/"}>
+                <Link href={"https://api.easy Transact.com/"}>
                 </Link>
                 <Button
                   size="lg"
                   variant={"accent"}
                   className="group"
                 >
-                  {"Intégrer l'API Gpay"}
+                  {"Intégrer l'API Easy Transact"}
                   <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                 </Button>
                 <Link href={"/contact"}>
@@ -130,7 +130,7 @@ export function FinalCTASection() {
 
                 <ImageWithFallback
                   src={"Entrepreneur_africain.png"}
-                  alt="Entrepreneur africain avec smartphone - Agent Gpay potentiel"
+                  alt="Entrepreneur africain avec smartphone - Agent Easy Transact potentiel"
                   className="relative z-10 rounded-3xl shadow-2xl border border-white/20 w-full"
                   width={600}
                   height={800}

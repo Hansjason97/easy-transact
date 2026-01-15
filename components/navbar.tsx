@@ -12,7 +12,7 @@ function Navbar() {
       <div className="container mx-auto px-6 lg:px-7">
         <div className="flex justify-between items-center h-18">
           {/**Logo Home */}
-          <Link href={"/"}><img src={"/images/logo.png"} alt='gPay' className="h-12 w-auto"/></Link>
+          <Link href={"/"}><img src={"/images/logo.svg"} alt='easy-transact' className="h-8 w-auto"/></Link>
           {/**Main navigation desktop */}
           <nav className="hidden md:flex items-center gap-10">
             {navLinks.filter(link=> link.href !== "/").map(({href, title}, id)=>
@@ -31,7 +31,7 @@ function Navbar() {
             <SheetContent>
               <SheetHeader>
                 <SheetTitle>
-                  <img src={"/images/logo.png"} className='h-12 w-autos'/>
+                  <img src={"/images/logo.svg"} className='h-8 w-auto'/>
                 </SheetTitle>
                 <SheetDescription/>
               </SheetHeader>

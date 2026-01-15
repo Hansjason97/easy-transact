@@ -49,16 +49,16 @@ export function BenefitsSection() {
           <div className="space-y-8">
             <div className="space-y-6">
               <AnimatedElement animation="fadeIn" delay={0.1}>
-                <div className="inline-flex items-center px-4 py-2 bg-red-50 border border-red-200 rounded-full text-[#BF1823] text-sm font-medium">
+                <div className="inline-flex items-center px-4 py-2 bg-sky-50 border border-sky-200 rounded-full text-primary text-sm font-medium">
                   <Sparkles className="w-4 h-4 mr-2" />
-                  {"Pourquoi choisir Gpay ?"}
+                  {"Pourquoi choisir Easy Transact ?"}
                 </div>
               </AnimatedElement>
 
               <AnimatedElement animation="slideLeft" delay={0.2}>
                 <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
                   {"Une expérience"}
-                  <span className="block text-transparent bg-gradient-to-r from-[#BF1823] to-[#A01419] bg-clip-text">
+                  <span className="block text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text">
                     {"révolutionnaire"}
                   </span>
                 </h2>
@@ -67,7 +67,7 @@ export function BenefitsSection() {
               <AnimatedElement animation="slideLeft" delay={0.4}>
                 <p className="text-xl text-gray-600 leading-relaxed">
                   {`Découvrez pourquoi plus de 50,000 Camerounais font confiance à
-                  Gpay pour leurs transactions financières quotidiennes.`}
+                  Easy Transact pour leurs transactions financières quotidiennes.`}
                 </p>
               </AnimatedElement>
             </div>
@@ -132,10 +132,10 @@ export function BenefitsSection() {
           <div className="relative">
             <AnimatedElement animation="slideRight" delay={0.3}>
               <div className="relative z-10">
-                <div className="absolute inset-0 bg-gradient-to-r from-[#084782]/20 to-[#BF1823]/20 rounded-3xl blur-2xl transform rotate-3"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-[#084782]/20 to-primary/20 rounded-3xl blur-2xl transform rotate-3"></div>
                 <ImageWithFallback
                   src={"cassier_paiment.png"}
-                  alt="Caissier Gpay professionnel avec terminal de paiement"
+                  alt="Caissier Easy Transact professionnel avec terminal de paiement"
                   className="relative z-10 rounded-3xl shadow-2xl border border-gray-200 w-full"
                   width={600}
                   height={800}

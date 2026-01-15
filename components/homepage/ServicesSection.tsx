@@ -88,7 +88,7 @@ export function ServicesSection() {
           <AnimatedElement animation="fadeUp" delay={0.2}>
             <h2 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               {"Tout ce dont vous avez besoin"}
-              <span className="block text-transparent bg-gradient-to-r from-[#084782] to-[#BF1823] bg-clip-text">
+              <span className="block text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text">
                 {"en un seul endroit"}
               </span>
             </h2>
@@ -158,7 +158,7 @@ export function ServicesSection() {
                 {"Prêt à transformer vos finances ?"}
               </h3>
               <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-                {`Rejoignez des milliers de Camerounais qui ont déjà choisi Gpay
+                {`Rejoignez des milliers de Camerounais qui ont déjà choisi Easy Transact
                 pour simplifier leur vie financière.`}
               </p>
               <Link href={"/services"}>

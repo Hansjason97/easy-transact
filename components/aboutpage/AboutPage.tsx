@@ -53,7 +53,7 @@ export function AboutPage() {
   const milestones = [
     {
       year: "2020",
-      title: "Création de Gpay",
+      title: "Création de Easy Transact",
       description:
         "Lancement de la première solution de paiement mobile au Cameroun",
       icon: Target,
@@ -95,7 +95,7 @@ export function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#BF1823] to-[#084782] text-white py-20 lg:py-28 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-primary to-secondary text-white py-20 lg:py-28 overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
         {/* Background decoration */}
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white/5 rounded-full transform translate-x-1/3 -translate-y-1/3"></div>
@@ -111,7 +111,7 @@ export function AboutPage() {
             </AnimatedElement>
             <AnimatedElement animation="fadeUp" delay={0.2}>
               <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-                {"À Propos de Gpay"}
+                {"À Propos de Easy Transact"}
                 <span className="block text-white/90">
                   {"Pionnier de la Fintech"}
                 </span>
@@ -137,7 +137,7 @@ export function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <AnimatedElement animation="fadeIn" delay={0.1}>
-                <div className="inline-flex items-center px-4 py-2 bg-red-50 border border-red-200 rounded-full text-[#BF1823] text-sm font-medium mb-6">
+                <div className="inline-flex items-center px-4 py-2 bg-red-50 border border-red-200 rounded-full text-primary text-sm font-medium mb-6">
                   <Target className="w-4 h-4 mr-2" />
                   {"Notre Mission"}
                 </div>
@@ -149,7 +149,7 @@ export function AboutPage() {
               </AnimatedElement>
               <AnimatedElement animation="slideLeft" delay={0.4}>
                 <p className="text-xl text-gray-600 mb-6 leading-relaxed">
-                  {`Chez Gpay, nous croyons que chaque Camerounais mérite un accès
+                  {`Chez Easy Transact, nous croyons que chaque Camerounais mérite un accès
                   équitable aux services financiers modernes. Notre mission est
                   de transformer l'écosystème financier camerounais en proposant
                   des solutions innovantes, sécurisées et adaptées aux réalités
@@ -168,7 +168,7 @@ export function AboutPage() {
                 <Link href={"/contact"}>
                   <Button
                     size="lg"
-                    className="!bg-[#BF1823] hover:!bg-[#A01419] !text-white !border-0 shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="!bg-primary hover:!bg-secondary !text-white !border-0 shadow-lg hover:shadow-xl transition-all duration-300"
                   >
                     {"Contacter Nous"}
                     <ArrowRight className="ml-2 h-5 w-5" />
@@ -178,10 +178,10 @@ export function AboutPage() {
             </div>
             <AnimatedElement animation="slideRight" delay={0.3}>
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#BF1823] to-[#084782] rounded-3xl transform rotate-6 opacity-20"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-3xl transform rotate-6 opacity-20"></div>
                 <ImageWithFallback
-                  src={"gpay_team.png"}
-                  alt="Équipe Gpay travaillant ensemble"
+                  src={"easy Transact_team.png"}
+                  alt="Équipe Easy Transact travaillant ensemble"
                   className="relative w-full h-96 object-cover rounded-3xl shadow-2xl"
                   width={600}
                   height={400}
@@ -197,7 +197,7 @@ export function AboutPage() {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
             <AnimatedElement animation="fadeIn" delay={0.1}>
-              <div className="inline-flex items-center px-4 py-2 bg-blue-50 border border-blue-200 rounded-full text-[#084782] text-sm font-medium mb-6">
+              <div className="inline-flex items-center px-4 py-2 bg-blue-50 border border-blue-200 rounded-full text-secondary text-sm font-medium mb-6">
                 <Zap className="w-4 h-4 mr-2" />
                 {"Nos Valeurs"}
               </div>
@@ -268,11 +268,11 @@ export function AboutPage() {
               >
                 <div className="flex items-start mb-12 last:mb-0 group">
                   <div className="flex-shrink-0 w-32 text-center">
-                    <div className="bg-gradient-to-br from-[#BF1823] to-[#084782] text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <div className="bg-gradient-to-br from-primary to-secondary text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                       <span className="font-bold">{milestone.year}</span>
                     </div>
                     <div className="bg-white w-12 h-12 rounded-full flex items-center justify-center mx-auto shadow-lg border-4 border-gray-100">
-                      <milestone.icon className="h-6 w-6 text-[#BF1823]" />
+                      <milestone.icon className="h-6 w-6 text-primary" />
                     </div>
                     {index !== milestones.length - 1 && (
                       <div className="w-0.5 h-20 bg-gradient-to-b from-gray-300 to-transparent mx-auto mt-4"></div>
@@ -296,7 +296,7 @@ export function AboutPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-24 bg-gradient-to-r from-[#BF1823] to-[#084782] text-white relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-r from-primary to-[#084782] text-white relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-white/10 rounded-full transform translate-x-1/3 -translate-y-1/3"></div>
         <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-white/10 rounded-full transform -translate-x-1/3 translate-y-1/3"></div>
@@ -305,7 +305,7 @@ export function AboutPage() {
           <div className="text-center mb-16">
             <AnimatedElement animation="fadeUp" delay={0.2}>
               <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-                {"Gpay en Chiffres"}
+                {"Easy Transact en Chiffres"}
               </h2>
             </AnimatedElement>
             <AnimatedElement animation="fadeUp" delay={0.4}>
@@ -347,13 +347,13 @@ export function AboutPage() {
         <div className="container mx-auto px-6 lg:px-8 text-center">
           <AnimatedElement animation="fadeUp" delay={0.2}>
             <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-              {"Rejoignez l'Aventure Gpay"}
+              {"Rejoignez l'Aventure Easy Transact"}
             </h2>
           </AnimatedElement>
           <AnimatedElement animation="fadeUp" delay={0.4}>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               {`Que vous soyez un particulier, un commerçant ou un entrepreneur,
-              Gpay a une solution pour vous`}
+              Easy Transact a une solution pour vous`}
             </p>
           </AnimatedElement>
           <AnimatedElement animation="fadeUp" delay={0.6}>

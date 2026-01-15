@@ -144,7 +144,7 @@ export function ServicesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#BF1823] to-[#084782] text-white py-20 lg:py-28 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-primary to-secondary text-white py-20 lg:py-28 overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
         {/* Background decoration */}
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white/5 rounded-full transform translate-x-1/3 -translate-y-1/3"></div>
@@ -283,12 +283,12 @@ export function ServicesPage() {
           <div className="text-center mb-16">
             <AnimatedElement animation="fadeUp" delay={0.2}>
               <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-                {"Pourquoi Choisir Gpay ?"}
+                {"Pourquoi Choisir Easy Transact ?"}
               </h2>
             </AnimatedElement>
             <AnimatedElement animation="fadeUp" delay={0.4}>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                {`Les avantages qui font de Gpay le partenaire idéal pour votre
+                {`Les avantages qui font de Easy Transact le partenaire idéal pour votre
                 activité`}
               </p>
             </AnimatedElement>
@@ -303,7 +303,7 @@ export function ServicesPage() {
               >
                 <Card className="text-center border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                   <CardContent className="p-8">
-                    <div className="bg-gradient-to-br from-[#BF1823] to-[#084782] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <div className="bg-gradient-to-br from-primary to-secondary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                       <benefit.icon className="h-8 w-8 text-white" />
                     </div>
                     <h3 className="text-xl font-semibold mb-4">
@@ -321,7 +321,7 @@ export function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-[#BF1823] to-[#084782] text-white relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-r from-primary to-secondary text-white relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-white/10 rounded-full transform translate-x-1/3 -translate-y-1/3"></div>
         <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-white/10 rounded-full transform -translate-x-1/3 translate-y-1/3"></div>
@@ -335,7 +335,7 @@ export function ServicesPage() {
           <AnimatedElement animation="fadeUp" delay={0.4}>
             <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
               {`Rejoignez des milliers d'agents qui ont transformé leur activité
-              avec Gpay`}
+              avec Easy Transact`}
             </p>
           </AnimatedElement>
           <AnimatedElement animation="fadeUp" delay={0.6}>

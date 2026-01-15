@@ -15,7 +15,7 @@ import { AnimatedElement } from "../animatedElement";
 const testimonials = [
   {
     quote:
-      "Avec Gpay, je peux envoyer de l'argent à ma famille en toute sécurité et payer mes factures sans me déplacer. C'est vraiment révolutionnaire !",
+      "Avec Easy Transact, je peux envoyer de l'argent à ma famille en toute sécurité et payer mes factures sans me déplacer. C'est vraiment révolutionnaire !",
     name: "Marie Ngono",
     role: "Entrepreneuse, Douala",
     image:
@@ -24,7 +24,7 @@ const testimonials = [
   },
   {
     quote:
-      "Depuis que j'utilise Gpay, mes transactions sont plus rapides et sécurisées. Le service client est excellent et toujours disponible.",
+      "Depuis que j'utilise Easy Transact, mes transactions sont plus rapides et sécurisées. Le service client est excellent et toujours disponible.",
     name: "Paul Mbarga",
     role: "Commerçant, Yaoundé",
     image:
@@ -33,7 +33,7 @@ const testimonials = [
   },
   {
     quote:
-      "Grâce à Gpay, je peux facilement recevoir les virements de mes enfants à l'étranger. L'interface est simple et intuitive.",
+      "Grâce à Easy Transact, je peux facilement recevoir les virements de mes enfants à l'étranger. L'interface est simple et intuitive.",
     name: "Mama Françoise",
     role: "Retraitée, Bafoussam",
     image:
@@ -111,7 +111,7 @@ export function TestimonialsSection() {
 
           <AnimatedElement animation="fadeUp" delay={0.4}>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-              {`Découvrez comment Gpay transforme la vie financière des
+              {`Découvrez comment Easy Transact transforme la vie financière des
               Camerounais au quotidien.`}
             </p>
           </AnimatedElement>

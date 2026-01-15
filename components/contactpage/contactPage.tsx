@@ -126,9 +126,9 @@ export function ContactPage() {
 
   const faqs = [
     {
-      question: "Comment intégrer l'API Gpay ?",
+      question: "Comment intégrer l'API Easy Transact ?",
       answer:
-        "Pour intégrer l'API Gpay, créez d'abord un compte développeur, obtenez vos clés API, testez en environnement sandbox puis passez en production. L'intégration prend généralement 1-3 jours.",
+        "Pour intégrer l'API Easy Transact, créez d'abord un compte développeur, obtenez vos clés API, testez en environnement sandbox puis passez en production. L'intégration prend généralement 1-3 jours.",
     },
     {
       question: "Quels sont les frais de transaction ?",
@@ -136,21 +136,21 @@ export function ContactPage() {
         "Nos frais sont très compétitifs et varient selon le type de transaction. Consultez notre grille tarifaire détaillée sur notre site web ou contactez-nous directement.",
     },
     {
-      question: "Gpay est-il sécurisé ?",
+      question: "Easy Transact est-il sécurisé ?",
       answer:
         "Absolument. Nous utilisons les dernières technologies de cryptage et respectons toutes les réglementations financières camerounaises pour protéger vos données et transactions.",
     },
     {
-      question: "Dans quelles régions Gpay est-il disponible ?",
+      question: "Dans quelles régions Easy Transact est-il disponible ?",
       answer:
-        "Gpay est disponible dans les 10 régions du Cameroun avec plus de 1000 points de service actifs.",
+        "Easy Transact est disponible dans les 10 régions du Cameroun avec plus de 1000 points de service actifs.",
     },
   ];
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-[#BF1823] to-[#084782] text-white py-20 lg:py-28 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-primary to-secondary text-white py-20 lg:py-28 overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
         {/* Background decoration */}
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white/5 rounded-full transform translate-x-1/3 -translate-y-1/3"></div>
@@ -442,7 +442,7 @@ export function ContactPage() {
                 <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
                   <CardContent className="p-8">
                     <div className="flex items-start">
-                      <div className="bg-gradient-to-br from-[#BF1823] to-[#084782] w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <div className="bg-gradient-to-br from-primary to-secondary w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                         <span className="text-white text-sm font-bold">?</span>
                       </div>
                       <div>
