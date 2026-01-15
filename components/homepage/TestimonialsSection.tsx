@@ -19,7 +19,7 @@ const testimonials = [
     name: "Marie Ngono",
     role: "Entrepreneuse, Douala",
     image:
-      "https://images.unsplash.com/photo-1494790108755-2616b332c5d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80",
+      "/images/marie.png",
     rating: 5,
   },
   {
@@ -28,7 +28,7 @@ const testimonials = [
     name: "Paul Mbarga",
     role: "Commerçant, Yaoundé",
     image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80",
+      "/images/paul.png",
     rating: 5,
   },
   {
@@ -37,7 +37,7 @@ const testimonials = [
     name: "Mama Françoise",
     role: "Retraitée, Bafoussam",
     image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80",
+      "/images/mama.png",
     rating: 5,
   },
 ];
@@ -45,41 +45,26 @@ const testimonials = [
 const partners = [
   {
     name: "Orange Money",
-    image: "Orange_Money.png",
+    image: "/partenaires/om.png",
   },
   {
     name: "MTN",
     image:
-      "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80&q=80",
+      "/partenaires/momo.png",
   },
   {
     name: "Western Union",
     image: "Western_Union.png",
   },
   {
-    name: "Ria",
+    name: "Krest",
     image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80&q=80",
+      "/partenaires/krest.jpg",
   },
   {
-    name: "Visa",
+    name: "Simbar BET",
     image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80&q=80",
-  },
-  {
-    name: "Mastercard",
-    image:
-      "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80&q=80",
-  },
-  {
-    name: "ENEO",
-    image:
-      "https://images.unsplash.com/photo-1556742111-a301076d9d18?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80&q=80",
-  },
-  {
-    name: "CAMWATER",
-    image:
-      "https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=80&q=80",
+      "/partenaires/simbar.jpeg",
   },
 ];
 
