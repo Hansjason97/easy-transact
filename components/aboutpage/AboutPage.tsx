@@ -1,11 +1,12 @@
 "use client";
 import {
   ArrowRight,
+  ArrowUpDownIcon,
   Award,
+  DollarSignIcon,
   Globe,
   Heart,
   Shield,
-  Star,
   Target,
   TrendingUp,
   Users,
@@ -80,14 +81,14 @@ export function AboutPage() {
     {
       year: "2024",
       title: "Leader du Marché",
-      description: "Plus de 500,000 utilisateurs actifs à travers le pays",
+      description: "Plus de 10 000 transactions par jour",
       icon: Award,
     },
   ];
 
   const stats = [
-    { number: "500K+", label: "Utilisateurs Actifs", icon: Users },
-    { number: "1000+", label: "Agents Partenaires", icon: Star },
+    { number: "2+ Millions", label: "Transactions", icon: ArrowUpDownIcon },
+    { number: "12+ Milliards", label: "Volume traité", icon: DollarSignIcon },
     { number: "10", label: "Régions Couvertes", icon: Globe },
     { number: "24/7", label: "Support Client", icon: Shield },
   ];
@@ -131,13 +132,13 @@ export function AboutPage() {
       {/* Mission Section */}
       <section className="py-24 bg-white relative overflow-hidden">
         {/* Background decoration */}
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-r from-blue-50 to-red-50 rounded-full opacity-40 blur-3xl"></div>
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-r from-blue-50 to-purple-50 rounded-full opacity-40 blur-3xl"></div>
 
         <div className="relative container mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <AnimatedElement animation="fadeIn" delay={0.1}>
-                <div className="inline-flex items-center px-4 py-2 bg-red-50 border border-red-200 rounded-full text-primary text-sm font-medium mb-6">
+                <div className="inline-flex items-center px-4 py-2 bg-sky-50 border border-sky-200 rounded-full text-primary text-sm font-medium mb-6">
                   <Target className="w-4 h-4 mr-2" />
                   {"Notre Mission"}
                 </div>
@@ -222,7 +223,7 @@ export function AboutPage() {
                 animation="fadeUp"
                 delay={0.6 + index * 0.1}
               >
-                <Card className="text-center border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+                <Card className="h-full text-center border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
                   <CardContent className="p-8">
                     <div
                       className={`w-16 h-16 rounded-full bg-gradient-to-br ${value.color} flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}
@@ -323,7 +324,7 @@ export function AboutPage() {
                 animation="fadeUp"
                 delay={0.6 + index * 0.1}
               >
-                <Card className="text-center bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300">
+                <Card className="text-center bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 h-full">
                   <CardContent className="p-8">
                     <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                       <stat.icon className="h-8 w-8 text-white" />

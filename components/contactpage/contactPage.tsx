@@ -61,7 +61,6 @@ export function ContactPage() {
       details: [
         "Siège Social: Douala, Cameroun",
         "Deido Total Bonateki",
-        "BP 1234 Douala",
       ],
       color: "from-blue-500 to-blue-600",
     },

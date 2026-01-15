@@ -3,6 +3,7 @@ import { Button } from "../ui/button";
 import { ArrowRight, Play, CheckCircle } from "lucide-react";
 import { ImageWithFallback } from "../imageWithFallBack";
 import { AnimatedElement } from "../animatedElement";
+import Link from "next/link";
 
 interface HeroSectionProps {
   onNavigate?: (page: string) => void;
@@ -49,23 +50,25 @@ export function HeroSection({ onNavigate }: HeroSectionProps) {
           {/* CTA Buttons */}
           <AnimatedElement animation="fadeUp" delay={0.6}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button
-                size="lg"
-                onClick={() => onNavigate?.("api-docs")}
-                className="!bg-gradient-to-r !from-primary !to-secondary hover:!from-primary hover:!to-primary/80 !text-white !border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 px-8 py-6 text-lg font-semibold rounded-2xl group"
-              >
-                {"Documentation API"}
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link href={"https://documenter.getpostman.com/view/20836288/2sB3Hhu34a"} target="_blank">
+                <Button
+                  size="lg"
+                  onClick={() => onNavigate?.("api-docs")}
+                  className="!bg-gradient-to-r !from-primary !to-secondary hover:!from-primary hover:!to-primary/80 !text-white !border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 px-8 py-6 text-lg font-semibold rounded-2xl group"
+                >
+                  {"Documentation API"}
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
 
-              <Button
+              {/* <Button
                 size="lg"
                 variant="outline"
                 className="!border-2 !border-gray-300 !text-gray-700 hover:!bg-gray-50 hover:!border-gray-400 px-8 py-6 text-lg font-semibold rounded-2xl group"
               >
                 <Play className="mr-2 h-5 w-5" />
                 {"Voir la démo"}
-              </Button>
+              </Button> */}
             </div>
           </AnimatedElement>
 
