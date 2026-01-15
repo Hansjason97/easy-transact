@@ -50,7 +50,7 @@ const services = [
     bgColor: "bg-red-50",
     textColor: "text-[#BF1823]",
   },
-  {
+  /* {
     icon: Globe,
     title: "Virements Internationaux",
     description:
@@ -67,7 +67,7 @@ const services = [
     color: "from-indigo-500 to-indigo-600",
     bgColor: "bg-indigo-50",
     textColor: "text-indigo-600",
-  },
+  }, */
 ];
 
 export function ServicesSection() {

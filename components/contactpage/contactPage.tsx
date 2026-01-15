@@ -60,7 +60,7 @@ export function ContactPage() {
       title: "Adresse",
       details: [
         "Siège Social: Douala, Cameroun",
-        "Bonanjo, Boulevard de la Liberté",
+        "Deido Total Bonateki",
         "BP 1234 Douala",
       ],
       color: "from-blue-500 to-blue-600",
@@ -69,16 +69,14 @@ export function ContactPage() {
       icon: Phone,
       title: "Téléphone",
       details: [
-        "Service Client: +237 233 XX XX XX",
-        "Support Développeurs: +237 233 XX XX XX",
-        "Urgences: +237 233 XX XX XX",
+        "Service Client: +237 695 123 209",
       ],
       color: "from-green-500 to-green-600",
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["info@gpay.cm", "support@gpay.cm", "developers@gpay.cm"],
+      details: ["business@easy-transact.com"],
       color: "from-purple-500 to-purple-600",
     },
     {

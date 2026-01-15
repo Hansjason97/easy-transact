@@ -84,7 +84,7 @@ export function ServicesPage() {
       textColor: "text-[#BF1823]",
       image: "p2pTransferImage.png",
     },
-    {
+    /* {
       icon: Globe,
       title: "Virements Internationaux",
       description:
@@ -99,8 +99,8 @@ export function ServicesPage() {
       bgColor: "bg-orange-50",
       textColor: "text-orange-600",
       image: "internationalTransferImage.png",
-    },
-    {
+    }, */
+    /* {
       icon: TrendingUp,
       title: "Épargne & Investissement",
       description:
@@ -115,7 +115,7 @@ export function ServicesPage() {
       bgColor: "bg-indigo-50",
       textColor: "text-indigo-600",
       image: "savingsImage.png",
-    },
+    }, */
   ];
 
   const benefits = [

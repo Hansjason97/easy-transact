@@ -81,24 +81,24 @@ export function FinalCTASection() {
             {/* CTA Buttons */}
             <AnimatedElement animation="slideLeft" delay={1.0}>
               <div className="flex flex-col sm:flex-row gap-3 pt-4">
-                <Link href={"https://api.easy Transact.com/"}>
+                <Link href={"https://documenter.getpostman.com/view/20836288/2sB3Hhu34a"} target="_blank">
+                  <Button
+                    size="lg"
+                    variant={"accent"}
+                    className="group"
+                  >
+                    {"Intégrer l'API Easy Transact"}
+                    <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                  </Button>
                 </Link>
-                <Button
-                  size="lg"
-                  variant={"accent"}
-                  className="group"
-                >
-                  {"Intégrer l'API Easy Transact"}
-                  <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-                </Button>
                 <Link href={"/contact"}>
+                  <Button
+                    size="lg"
+                    variant="white"
+                  >
+                    {"Contacter Support"}
+                  </Button>
                 </Link>
-                <Button
-                  size="lg"
-                  variant="white"
-                >
-                  {"Contacter Support"}
-                </Button>
               </div>
             </AnimatedElement>
 

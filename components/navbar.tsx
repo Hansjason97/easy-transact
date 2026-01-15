@@ -21,7 +21,7 @@ function Navbar() {
           </nav>
           {/**Call to Action */}
           <div className="hidden md:flex items-center space-x-3">
-            <Link href={"https://api.gpay.com/"} target="_blank"><Button>{"Documentation API"}</Button></Link>
+            <Link href={"https://documenter.getpostman.com/view/20836288/2sB3Hhu34a"} target="_blank"><Button>{"Documentation API"}</Button></Link>
           </div>
           {/**Mobile menu */}
           <Sheet>
@@ -37,7 +37,7 @@ function Navbar() {
               </SheetHeader>
               <div className='w-full px-3 flex flex-col gap-1'>
                 {navLinks.map((item, id)=><NavigationLink key={id} href={item.href} className="w-full rounded-sm inline-flex min-h-14 items-center px-4 py-2 hover:bg-secondary/10">{item.title}</NavigationLink>)}
-                <Link href={"https://api.gpay.com"} target="_blank" className="flex items-center min-h-12 px-4 py-2 text-white bg-primary hover:bg-primary/80 rounded-sm transition-all duration-300 ease-out text-sm font-medium">{"Documentation API"}</Link>
+                <Link href={"https://documenter.getpostman.com/view/20836288/2sB3Hhu34a"} target="_blank" className="flex items-center min-h-12 px-4 py-2 text-white bg-primary hover:bg-primary/80 rounded-sm transition-all duration-300 ease-out text-sm font-medium">{"Documentation API"}</Link>
               </div>
             </SheetContent>
           </Sheet>

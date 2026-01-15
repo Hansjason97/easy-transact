@@ -35,7 +35,7 @@ export function Footer() {
             <div className="flex items-center">
               <ImageWithFallback
                 src="/images/logo-dark.svg"
-                alt="Gpay Logo"
+                alt="Easy Transact Logo"
                 className="h-8 w-auto"
                 width={120}
                 height={48}
@@ -75,8 +75,6 @@ export function Footer() {
                 "Mobile Payments",
                 "Bill Payments",
                 "Transferts P2P",
-                "Virements Internationaux",
-                "Épargne & Investissement",
               ].map((service, index) => (
                 <li key={index}>
                   <Link href={`/services#${service}`}></Link>
@@ -95,19 +93,19 @@ export function Footer() {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-blue-400 mt-1 flex-shrink-0" />
                 <div className="text-gray-300">
-                  <div>{"Quartier Bonanjo"}</div>
+                  <div>{"Deido, Total Bonateki"}</div>
                   <div>{"Douala, Cameroun"}</div>
                 </div>
               </div>
 
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-blue-400 flex-shrink-0" />
-                <span className="text-gray-300">{"+237 6 XX XX XX XX"}</span>
+                <a href="tel:237695123209" className="text-gray-300">{"+237 695 123 209"}</a>
               </div>
 
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-blue-400 flex-shrink-0" />
-                <span className="text-gray-300">{"contact@gpay.cm"}</span>
+                <a href={"mailto:business@easy-transact.com"} className="text-gray-300">{"business@easy-transact.com"}</a>
               </div>
             </div>
 
@@ -132,7 +130,7 @@ export function Footer() {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
-              {"© 2025 Gpay Cameroun. Tous droits réservés."}
+              {"© 2025 Easy Transact Cameroun. Tous droits réservés."}
             </div>
 
             <div className="flex space-x-6 text-sm">
