@@ -53,10 +53,6 @@ const partners = [
       "/partenaires/momo.png",
   },
   {
-    name: "Western Union",
-    image: "Western_Union.png",
-  },
-  {
     name: "Krest",
     image:
       "/partenaires/krest.jpg",
