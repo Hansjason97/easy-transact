@@ -62,6 +62,11 @@ const partners = [
     image:
       "/partenaires/simbar.jpeg",
   },
+  {
+    name: "Paripesa",
+    image:
+      "/partenaires/paripesa.svg",
+  },
 ];
 
 export function TestimonialsSection() {

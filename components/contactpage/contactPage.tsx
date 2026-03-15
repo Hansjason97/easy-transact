@@ -68,7 +68,7 @@ export function ContactPage() {
       icon: Phone,
       title: "Téléphone",
       details: [
-        "Service Client: +237 695 123 209",
+        "Service Client: +237 678 183 429",
       ],
       color: "from-green-500 to-green-600",
     },
